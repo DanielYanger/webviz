@@ -44,6 +44,7 @@ import UserNodePlayer from "webviz-core/src/players/UserNodePlayer";
 import type { UserNodes } from "webviz-core/src/types/panels";
 import { corsError } from "webviz-core/src/util/corsError";
 import demoLayoutJson from "webviz-core/src/util/demoLayout.json";
+import finalLayoutJson from "webviz-core/src/util/finalLayout.json";
 import { getGlobalVariablesFromUrl } from "webviz-core/src/util/getGlobalVariablesFromUrl";
 import {
   DEMO_QUERY_KEY,
@@ -226,22 +227,8 @@ function PlayerManager({
 
     // For testing, you can use ?layout-url=https://open-source-webviz-ui.s3.amazonaws.com/demoLayout.json
     const layoutUrl = params.get(LAYOUT_URL_QUERY_KEY);
-    if (layoutUrl) {
-      fetch(layoutUrl)
-        .then((response) => (response ? response.json() : undefined))
-        .then((json) => {
-          if (json) {
-            loadLayout({ ...json, skipSettingLocalStorage: false });
-          }
-        })
-        .catch((error) => {
-          sendNotification(
-            "Layout failed to load",
-            `Fetching remote file failed. ${corsError(layoutUrl)} ${error}`,
-            "user",
-            "error"
-          );
-        });
+    if (true) {
+      loadLayout({ ...finalLayoutJson, isFromUrl: false, skipSettingLocalStorage: true });
     } else if (params.has(DEMO_QUERY_KEY)) {
       loadLayout({ ...demoLayoutJson, isFromUrl: false, skipSettingLocalStorage: true });
     }
