@@ -1,0 +1,67 @@
+{
+  "layout": "3D Panel!309p5r8",
+  "savedProps": {
+    "3D Panel!309p5r8": {
+      "checkedKeys": [
+        "name:Topics",
+        "t:/cloud_nodelet/parameter_descriptions",
+        "t:/cloud_nodelet/parameter_updates",
+        "t:/diagnostics",
+        "t:/diagnostics_agg",
+        "t:/diagnostics_toplevel_state",
+        "t:/gps/fix",
+        "t:/gps/rtkfix",
+        "t:/gps/time",
+        "t:/image_raw",
+        "t:/obs1/gps/fix",
+        "t:/obs1/gps/rtkfix",
+        "t:/obs1/gps/time",
+        "t:/radar/range",
+        "t:/radar/tracks",
+        "t:/rosout",
+        "t:/velodyne_nodelet_manager/bond",
+        "t:/velodyne_packets",
+        "t:/velodyne_points",
+        "t:/map"
+      ],
+      "expandedKeys": [
+        "name:Topics",
+        "t:/tf"
+      ],
+      "followTf": "laser",
+      "cameraState": {
+        "targetOffset": [
+          -0.0034158198170256525,
+          0.013257713762630624,
+          0
+        ],
+        "distance": 17.688362352375123,
+        "perspective": true,
+        "phi": 0.1404642426926016,
+        "thetaOffset": 1.3186328555678077,
+        "fovy": 0.7853981633974483,
+        "near": 0.01,
+        "far": 5000
+      },
+      "modifiedNamespaceTopics": [],
+      "pinTopics": false,
+      "settingsByKey": {
+        "t:/velodyne_points": {
+          "colorField": "ring"
+        }
+      },
+      "autoSyncCameraState": false,
+      "autoTextBackgroundColor": true,
+      "followOrientation": false
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "skipSettingLocalStorage": false,
+  "version": 17,
+  "playbackConfig": {
+    "speed": 0.2,
+    "messageOrder": "receiveTime"
+  }
+}
